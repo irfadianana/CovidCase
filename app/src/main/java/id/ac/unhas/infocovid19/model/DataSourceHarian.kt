@@ -6,12 +6,12 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
-class DataSource {
+class DataSourceHarian {
     companion object{
-        fun createDataSet(jsonString: String): DataProvinsi{
+        fun createDataSet(jsonString: String): DataHarian{
 
             val gson = Gson()
-            val data: DataProvinsi = gson.fromJson(jsonString, DataProvinsi::class.java)
+            val data: DataHarian = gson.fromJson(jsonString, DataHarian::class.java)
 
             return data
         }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import id.ac.unhas.infocovid19.ui.provinsi.ProvinsiListFragment
+import id.ac.unhas.infocovid19.ui.harian.HarianListFragment
 
 class MainActivity : AppCompatActivity() {
 
