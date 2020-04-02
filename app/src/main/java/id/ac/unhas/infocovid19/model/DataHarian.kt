@@ -14,21 +14,31 @@ data class DataHarian(
 
 data class Harian(
     val harike: Int?,
-    val tanggal: Int?,
+    val tanggal: String?,
     val jumlahKasusBaruperHari: Int?,
     val jumlahKasusKumulatif: Int?,
     val jumlahpasiendalamperawatan: Int?,
-    val persentasePasiendalamPerawatan: Int?,
+    val persentasePasiendalamPerawatan: Double?,
     val jumlahPasienSembuh: Int?,
-    val persentasePasienSembuh: Int?,
+    val persentasePasienSembuh: Double?,
     val jumlahPasienMeninggal: Int?,
-    val persentasePasienMeninggal: Int?,
+    val persentasePasienMeninggal: Double?,
     val jumlahKasusSembuhperHari: Int?,
     val jumlahKasusMeninggalperHari: Int?,
     val jumlahKasusDirawatperHari: Int?,
     val fid: Int?
 ){
     override fun toString(): String {
-        return "Hari ke ${this.harike}[#tanggal: ${this.tanggal}, #jumlah kasus baru per hari: ${this.jumlahKasusBaruperHari}, #jumlah kasus kumulatif: ${this.jumlahKasusKumulatif}, #jumlah pasien dalam perawatan: ${this.jumlahpasiendalamperawatan}, #persentase pasien dalam perawatan: ${this.persentasePasiendalamPerawatan}, #jumlah pasien sembuh: ${this.jumlahPasienSembuh}, #persentase pasien sembuh: ${this.persentasePasienSembuh}, #jumlah pasien meninggal: ${this.jumlahPasienMeninggal}, #persentase pasien meninggal: ${this.persentasePasienMeninggal}, #jumlah kasus meninggal per hari: ${this.jumlahKasusMeninggalperHari}, #jumlah kasus dirawat per hari: ${this.jumlahKasusDirawatperHari}]"
+        return "Hari ke ${this.harike}[#tanggal: ${this.tanggal}, " +
+                "#jumlah kasus baru per hari: ${this.jumlahKasusBaruperHari}, " +
+                "#jumlah kasus kumulatif: ${this.jumlahKasusKumulatif}, " +
+                "#jumlah pasien dalam perawatan: ${this.jumlahpasiendalamperawatan}, " +
+                "#persentase pasien dalam perawatan: ${this.persentasePasiendalamPerawatan}, " +
+                "#jumlah pasien sembuh: ${this.jumlahPasienSembuh}, " +
+                "#persentase pasien sembuh: ${this.persentasePasienSembuh}, " +
+                "#jumlah pasien meninggal: ${this.jumlahPasienMeninggal}, " +
+                "#persentase pasien meninggal: ${this.persentasePasienMeninggal}, " +
+                "#jumlah kasus meninggal per hari: ${this.jumlahKasusMeninggalperHari}, " +
+                "#jumlah kasus dirawat per hari: ${this.jumlahKasusDirawatperHari}]"
     }
 }

@@ -42,7 +42,7 @@ class ProvinsiListFragment : Fragment() {
 
         val provinsiRepository = ProvinsiRepository(jsonList)
 
-        viewModelFactory =ProvinsiViewModelFactory(provinsiRepository)
+        viewModelFactory = ProvinsiViewModelFactory(provinsiRepository)
 
         viewModel = ViewModelProvider(this,viewModelFactory).get(ProvinsiViewModel::class.java)
 

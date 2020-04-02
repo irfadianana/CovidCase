@@ -8,23 +8,23 @@ import id.ac.unhas.infocovid19.R
 import id.ac.unhas.infocovid19.model.Harian
 import kotlinx.android.synthetic.main.recyclerview_item_harian.view.*
 
-class HarianAdapter {private val daftarHarian: ArrayList<Harian>) :
+class HarianAdapter(private val daftarHarian: ArrayList<Harian>) :
     RecyclerView.Adapter<HarianAdapter.HarianHolder>() {
         class HarianHolder (itemView: View):RecyclerView.ViewHolder(itemView) {
             fun bind(itemHarian: Harian){
                 with(itemView){
-                    hari_ke.text = itemHarian.harike
-                    data_harian.text = "tanggal: ${itemHarian.tanggal}, " +
-                            "jumlah kasus baru per hari: ${itemHarian.jumlahKasusBaruperHari}, " +
-                            "jumlah kasus kumulatif: ${itemHarian.jumlahKasusKumulatif}, " +
-                            "jumlah pasien dalam perawatan: ${itemHarian.jumlahpasiendalamperawatan}, " +
-                            "persentase pasien dalam perawatan: ${itemHarian.persentasePasiendalamPerawatan}, " +
-                            "jumlah pasien sembuh: ${itemHarian.jumlahPasienSembuh}, " +
-                            "persentase pasien sembuh: ${itemHarian.persentasePasienSembuh}, " +
-                            "jumlah pasien meninggal: ${itemHarian.jumlahPasienMeninggal}, " +
-                            "persentase pasien meninggal: ${itemHarian.persentasePasienMeninggal}, " +
-                            "jumlah kasus meninggal per hari: ${itemHarian.jumlahKasusMeninggalperHari}, " +
-                            "jumlah kasus dirawat per hari: ${itemHarian.jumlahKasusDirawatperHari}]"
+                    hari_ke.text = "Hari Ke- ${itemHarian.harike.toString()}"
+                    data_harian.text = "Tanggal: ${itemHarian.tanggal} \n" +
+                            "Jumlah kasus baru per hari: ${itemHarian.jumlahKasusBaruperHari} Kasus \n" +
+                            "Jumlah kasus kumulatif: ${itemHarian.jumlahKasusKumulatif} Kasus \n" +
+                            "Jumlah pasien dalam perawatan: ${itemHarian.jumlahpasiendalamperawatan} Orang \n" +
+                            "Persentase pasien dalam perawatan: ${itemHarian.persentasePasiendalamPerawatan}% \n" +
+                            "Jumlah pasien sembuh: ${itemHarian.jumlahPasienSembuh} Orang \n" +
+                            "Persentase pasien sembuh: ${itemHarian.persentasePasienSembuh}% \n" +
+                            "Jumlah pasien meninggal: ${itemHarian.jumlahPasienMeninggal} Orang \n" +
+                            "Persentase pasien meninggal: ${itemHarian.persentasePasienMeninggal}% \n" +
+                            "Jumlah kasus meninggal per hari: ${itemHarian.jumlahKasusMeninggalperHari} Kasus \n" +
+                            "Jumlah kasus dirawat per hari: ${itemHarian.jumlahKasusDirawatperHari} Kasus"
                 }
             }
         }
